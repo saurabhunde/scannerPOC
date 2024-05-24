@@ -1,7 +1,7 @@
 import './App.css'
- //import {BarcodeScanner} from './BarcodeScnner.jsx';
+ import {BarcodeScanner} from './BarcodeScnner.jsx';
  //import CodeScanner from './CodeScanner';
- import AnyCodeScanner from './AnyCodeScanner';
+//  import AnyCodeScanner from './AnyCodeScanner';
 //  import QRCodeScanner from './QRScanner';
 //import BarcodeScanner1 from "./BarcodeScnner1"
 // import {Scanner} from './Scanner.jsx';
@@ -17,8 +17,8 @@ function App() {
   // };
   return (
     <>
-      {/* <BarcodeScanner/> */}
-      <AnyCodeScanner />
+      <BarcodeScanner/>
+      {/* <AnyCodeScanner /> */}
       {/* <BarcodeScanner1/> */}
       {/* <QRCodeScanner
         onScanSuccess={handleScanSuccess}
