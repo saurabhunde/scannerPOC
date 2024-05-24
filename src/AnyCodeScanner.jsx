@@ -52,18 +52,17 @@ const onError = useCallback((errorMessage) => {
 }, [stopAndClearScanner]);
 
 
-const initiateScanner = useCallback((cameraId) => {
+const initiateScanner = useCallback(() => {
     if(scannerInstance && scannerInstance.current) { 
         // if(scannerInstance.current.getState() === "SCANNING" || scannerInstance.current.getState() === "PAUSED") {
         //     stopAndClearScanner();
         // }
         scannerInstance.current
         .start(
-        { deviceId: { exact: cameraId} },
+            { facingMode: "environment" },
           {
             fps: 10, 
             qrbox: { width: 400, height: 400 },
-           
           },
           onSuccess,
           onError
